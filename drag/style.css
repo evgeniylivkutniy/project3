@@ -1,0 +1,76 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.drag-area-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px dashed rgb(250, 51, 51);
+    border-radius: 5px;
+    width: 800px;
+    margin: 200px 0 100px 0;
+    padding: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    font-weight: 700;
+}
+.drag-area-container .button{
+    background-color: rgb(250, 51, 51);
+    padding: 10px 15px;
+    color: white;
+    border-radius: 10px;
+}
+.preview-container{
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: content;
+    align-items: center;
+    /* justify-content: center; */
+    /* border: 1px solid red; */
+    width: 800px;
+    /* height: 400px; */
+}
+.image-box{
+    position: relative;
+    width: 110px;
+    height: 110px;
+    margin: 10px;
+    border: 1px solid gray;
+}
+.image-box:hover .close{
+    display: block;
+}
+.preview-border{
+    border: 1px solid red;
+}
+.txt-box{
+    position: relative;
+    width: 110px;
+    height: 110px;
+    margin: 10px;
+}
+.csv-box{
+    position: relative;
+    width: 110px;
+    height: 110px;
+    margin: 10px;
+}
+.other-box{
+    position: relative;
+    border: 2px solid red;
+    width: 110px;
+    height: 110px;
+    margin: 10px;
+}
+.close{
+    z-index: 99;
+   color: red;
+   display: none;
+}
