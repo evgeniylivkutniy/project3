@@ -18,8 +18,14 @@ dragAndDropArea.addEventListener('drop', (event) => {
 let previewContainer = document.querySelector('.preview-container')
 function displayFiles(file) {
     if (file) {
+        let previewBlock = document.createElement('div');
+        let icon = document.createElement('img')
+        icon.src = './images/closer.jpg';
+        icon.classList.add('icon')
         const img = document.createElement('img');
         img.setAttribute('draggable', 'true')
+        icon.setAttribute('draggable', 'true')
+        previewBlock.setAttribute('draggable', 'true')
         if (file.type.startsWith("image/")) {
             img.classList.add('image-box')
             img.src = URL.createObjectURL(file);
@@ -36,15 +42,16 @@ function displayFiles(file) {
             img.classList.add('other-box')
             img.src = './images/not-found.png'
         }
+        function deleteImage() {
+            previewBlock.remove()
+        }
+        icon.addEventListener('click', e => deleteImage(e))
+        previewBlock.classList.add('previewBlock')
+        previewContainer.appendChild(previewBlock)
+        previewBlock.appendChild(img)
+        previewBlock.appendChild(icon)
+        previewContainer.classList.add('preview-border');
 
-        let toClose = document.createElement('a')
-        toClose.setAttribute('href', '#')
-        toClose.classList.add('close')
-        toClose.innerHTML = 'delete'
-        img.appendChild(toClose)
-
-        previewContainer.appendChild(img)
-        previewContainer.classList.add('preview-border')
     }
 }
 fileEl.addEventListener('change', ({ target: { files } }) => {
@@ -52,7 +59,9 @@ fileEl.addEventListener('change', ({ target: { files } }) => {
 })
 
 
-//переміщення в preview-container
+//переміщення в preview-container 
+//перестало працювати, коли почав створювати в ф-ції displayFile() спочатку previewBlock, а потім <img> i <img>
+
 previewContainer.addEventListener(`dragstart`, (evt) => {
     evt.target.classList.add(`selected`);
 })
