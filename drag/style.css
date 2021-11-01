@@ -77,6 +77,9 @@
         width: 75px;
         height: 75px;
     }
+    .txt-box{width: 75px;height: 75px;}
+    .csv-box{width: 75px;height: 75px;}
+    .other-box{width: 75px;height: 75px;}
     .drag-area-container{
         width: 500px;
         margin: 40px 0 20px 0;
