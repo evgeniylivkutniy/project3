@@ -18,7 +18,6 @@ dragAndDropArea.addEventListener('drop', (event) => {
 let previewContainer = document.querySelector('.preview-container')
 function displayFiles(file) {
     if (file) {
-
         const img = document.createElement('img');
         img.setAttribute('draggable', 'true')
         if (file.type.startsWith("image/")) {
@@ -44,9 +43,6 @@ function displayFiles(file) {
         toClose.innerHTML = 'delete'
         img.appendChild(toClose)
 
-        img.addEventListener('click', e => {
-            e.target.remove(img)
-        })
         previewContainer.appendChild(img)
         previewContainer.classList.add('preview-border')
     }
@@ -79,3 +75,4 @@ previewContainer.addEventListener(`dragover`, (evt) => {
 
     previewContainer.insertBefore(activeElement, nextElement);
 });
+
