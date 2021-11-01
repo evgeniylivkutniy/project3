@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+}
+#canvas{
+    cursor:cell
+}
+button{
+    font-size: 15px;
+}
+.pallete{
+    font-size: 18px;
+    height: auto;
+    width: 350px;
+    margin: 7% 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center
+    
+}
+#canvas{
+    border: 3px solid blue;
+    margin: 7% auto ;
+}
+.tools{
+    border: 2px solid green;
+    width: 350px;
+    margin: 7% 0;
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.colors button {
+  display: inline-block;
+  border: 1px solid #00000026;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  margin: 2px;
+}
+.colors button:nth-of-type(1) {
+  background-color: red;
+}
+.colors button:nth-of-type(2) {
+  background-color: orange;
+}.colors button:nth-of-type(3) {
+  background-color: yellow;
+}.colors button:nth-of-type(4) {
+  background-color: green;
+}.colors button:nth-of-type(5) {
+  background-color: aqua;
+}.colors button:nth-of-type(6) {
+  background-color: blue;
+}.colors button:nth-of-type(7) {
+  background-color: purple;
+}.colors button:nth-of-type(8) {
+  background-color: brown;
+}.colors button:nth-of-type(9) {
+  background-color: black;
+}.colors button:nth-of-type(10) {
+  background-color: gray;
+}.colors button:nth-of-type(11) {
+  background-color: burlywood;
+}.colors button:nth-of-type(12) {
+  background-color: yellowgreen;
+}
+.lineWidth{
+font-size: 18px;
+}
+.lineWidth button{
+    width: 60px;
+    margin: 2px;
+    padding: 5px;
+}
+.eraser{
+    width: 100%;
+}
+.eraser button{
+    display: inline-block;
+    margin: 2px auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    border: 1px solid black;
+    background-color: white;
+}
+.eraser input{
+    margin-left: 20px;
+    width: 80px;
+    height: 40px;
+}
+.buttons{
+    width: 100%;
+}
+.buttons button{
+    width: 30%;
+    padding: 10px;
+}
+
+.tools .figures button img{
+  width: 70px;
+  height: 70px;
+  
+}
+/* .tools .figures button:nth-of-type(1){
+  background-image: url(./images/pencil.jpg);
+}
+.tools .figures button:nth-of-type(1){
+  background-image: url(./images/line.png);
+}
+.tools .figures button:nth-of-type(1){
+  background-image: url(./images/rect.png);
+}
+.tools .figures button:nth-of-type(1){
+  background-image: url(./images/arc.png);
+}
+.tools .figures button:nth-of-type(1){
+  background-image: url(./images/threeangle.png);
+}
+.tools .figures button:nth-of-type(1){
+  background-image: url(./images/star.png);
+}
+.tools .figures button:nth-of-type(1){
+  background-image: url(./images/sky.png);
+} */

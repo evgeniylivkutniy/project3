@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="pallete">
+            <div class="colors">
+                <p>Choose your color:</p>
+                <button type="button" value="red"></button>
+                <button type="button" value="orange"></button>
+                <button type="button" value="yellow"></button>
+                <button type="button" value="green"></button>
+                <button type="button" value="aqua"></button>
+                <button type="button" value="blue"></button>
+                <button type="button" value="purple"></button>
+                <button type="button" value="brown"></button>
+                <button type="button" value="black"></button>
+                <button type="button" value="gray"></button>
+                <button type="button" value="burlywood"></button>
+                <button type="button" value="yellowgreen"></button>
+            </div>
+            <div class="lineWidth">
+                <p>Choose width of line:</p>
+                <button type="button" value="1">1px</button>
+                <button type="button" value="2">2px</button>
+                <button type="button" value="5">5px</button>
+                <button type="button" value="10">10px</button>
+                <button type="button" value="25">25px</button>
+            </div>
+            <div class="eraser">
+                <p>Eraser or Your own colour:</p>
+                <button type="button" value="white"></button>
+                <input type="color">
+            </div>
+            <div class="buttons">
+                <button id="clear" type="button">Clear</button>
+                <button id="save" type="button">Save</button>
+            </div>
+        </div>
+        <canvas id="canvas" width="1200px" height="600px">
+            Your browser is too old
+        </canvas>
+        <div class="tools">
+            <div class="strokeOrFill">
+                <button type="button" id="stroke">Stroke Style</button>
+                <button type="button" id="fill">Fill Style</button>
+            </div>
+            <div class="figures">
+                <button type="button" id="pencil"><img src="./images/pencil.jpg" alt=""></button>
+                <button type="button" id="line"><img src="./images/line.png" alt=""></button>
+                <button type="button" id="rect"><img src="./images/rect.png" alt=""></button>
+                <button type="button" id="arc"><img src="./images/arc.png" alt=""></button>
+                <button type="button" id="treangle"><img src="./images/threeangle.png" alt=""></button>
+                <button type="button" id="star"><img src="./images/star.png" alt=""></button>
+                <button type="button" id="sky"><img src="./images/sky.png" alt=""></button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+    <!-- <script src="./scripts/rect.js"></script> -->
+</body>
+
+</html>
