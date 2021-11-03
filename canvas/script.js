@@ -42,7 +42,7 @@ function drawPencil() {
     canvas.addEventListener('mousedown', (event) => handleMouseDown(event));
     canvas.addEventListener('mousemove', (event) => handleMouseMove(event));
     canvas.addEventListener('mouseup', (event) => handleMouseUp(event))
-    function handleMouseDown(event) {
+    function handleMouseDown(event) { // краще виносити вкладені функціїї на зовні, або використовувати класовий підхід, в якому всі функції будуть методами
         event.preventDefault();
         setMouseCoordinates(event)
         isDrawing = true;
