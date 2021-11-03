@@ -62,7 +62,12 @@ fileEl.addEventListener('change', ({ target: { files } }) => {
 //переміщення в preview-container 
 //перестало працювати, коли почав створювати в ф-ції displayFile() спочатку previewBlock, а потім <img> i <img>
 
-previewContainer.addEventListener(`dragstart`, (evt) => {
+// код нище потрібно перемістити в функцію displayFile.
+// previewContainer.addEventListener(... не годиться, оскільки це елемент який є контейнером для всіх
+// прев'юшок, а не конкретної якоїсь. Після того як ви перемістите код нище в displayFile функцію,
+// то замість previewContainer буде потрібно використовувати previewBlock.
+
+previewContainer.addEventListener(`dragstart`, (evt) => { // не потрібно використовувати `` у даному випадку
     evt.target.classList.add(`selected`);
 })
 previewContainer.addEventListener(`dragend`, (evt) => {
@@ -74,14 +79,13 @@ previewContainer.addEventListener(`dragover`, (evt) => {
     const currentElement = evt.target;
     const isMoveable = activeElement !== currentElement &&
         currentElement.classList.contains(`image-box`);
-    if (!isMoveable) {
-        return;
+    if (isMoveable) { // вживати return; це погана практика, значить що в коді погано прописана логіка
+        const nextElement = (currentElement === activeElement.nextElementSibling) ?
+            currentElement.nextElementSibling :
+            currentElement;
+    
+        previewContainer.insertBefore(activeElement, nextElement);
     }
 
-    const nextElement = (currentElement === activeElement.nextElementSibling) ?
-        currentElement.nextElementSibling :
-        currentElement;
-
-    previewContainer.insertBefore(activeElement, nextElement);
 });
 
